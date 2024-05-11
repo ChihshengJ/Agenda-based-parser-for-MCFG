@@ -1,6 +1,20 @@
+[project]
+name = "mcfg_parser"
+version = "0.1.0"
+description = "A module that can build a multiple context free grammar by the rules and alphabets provided and parse strings using agenda based parsing."
+authors = [
+    { name = "Chihsheng Jin", email = "jin22@ur.rochester.edu" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "pyparsing >= 2.4",
+    "pytest >= 6.0"
+]
+requires-python = ">=3.10"
+
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.poetry]
 name = "mcfg_parser"
@@ -10,9 +24,8 @@ authors = ["Chihsheng Jin <jin22@ur.rochester.edu>"]
 license = "MIT"
 repository = "https://github.com/ChihshengJ/MCFG-parser"
 
-
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.10"
 pyparsing = "^2.4"
 pytest = "^6.0"
 
@@ -26,5 +39,8 @@ testpaths = [
     "tests",
     "integration"
 ]
+
+
+
 
 
