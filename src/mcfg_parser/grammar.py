@@ -441,7 +441,7 @@ class MultipleContextFreeGrammar:
         self._rules = rules
         self._start_variables = start_variables
         if not variables:
-            self._variables = {i for r in self.rules for i in deepcopy(r.right_side) + ((deepcopy(r.left_side)),)}
+            self._variables = {i for r in self._rules for i in deepcopy(r.right_side) + ((deepcopy(r.left_side)),)}
         else:
             self._variables = variables
         if not alphabet:
