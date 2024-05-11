@@ -1,8 +1,8 @@
-# Agenda-based Parser for Multiple Context-Free Grammars
+# Agenda Based Parser for Multiple Context-Free Grammars
 
 ## Introduction
 
-This Python package implements an agenda-based parser as described in [Shieber et al. 1995](https://doi.org/10.1016/0743-1066(95)00035-I) for Multiple Context-Free Grammars (MCFG). The parser supports parsing complex hierarchical structures that are common in natural language and other structured data. The module consists of three parts, the grammar-related classes, the parser-related classes, and a tree structure for representing parse trees. There's also a comprehensive test suite that can be easily tested using `Pytest`
+This Python package implements an agenda-based parser as described in [Shieber et al. 1995](https://doi.org/10.1016/0743-1066(95)00035-I) for Multiple Context Free Grammars (MCFG). The parser supports parsing complex hierarchical structures that are common in natural language and other structured data. The module consists of three parts, the grammar-related classes, the parser-related classes, and a tree structure for representing parse trees. There's also a comprehensive test suite that can be easily tested using `Pytest`
 
 
 
