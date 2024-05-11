@@ -97,12 +97,15 @@ literal_rules=[
 
 # customize these code for your task, but please make sure the types of the parameters are all correct
 initiated_rules = {grammar.MCFGRule.from_string(r) for r in literal_rules}
+variables = {i for r in initiated_rules for i in deepcopy(r.right_side) + ((deepcopy(r.left_side)),)}
 start_variables = {i for i in 
                    {i for r in initiated_rules for i in deepcopy(r.right_side) + ((deepcopy(r.left_side)),)} 
                    if i.variable == 'S'}
 
 grammar.MultipleContextFreeGrammar.parser_class = abparser.AgendaBasedParser
-mcfg = grammar.MultipleContextFreeGrammar(
+g = grammar.MultipleContextFreeGrammar(
+                    alphabet={'the', 'a', 'greyhound', 'salmon', 'human', 'believe', 'believes', 'see', 'saw', 'who', 'which', 'does', 'did', 'that', 'with'},
+                    variables=variables,
                     rules=initiated_rules,
                     start_variables=start_variables)
 ```
