@@ -96,6 +96,7 @@ literal_rules=[
     "P(with)"]
 
 # customize these code for your task, but please make sure the types of the parameters are all correct
+initiated_rules = {grammar.MCFGRule.from_string(r) for r in literal_rules}
 start_variables = {i for i in 
                    {i for r in initiated_rules for i in deepcopy(r.right_side) + ((deepcopy(r.left_side)),)} 
                    if i.variable == 'S'}
